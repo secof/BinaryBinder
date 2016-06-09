@@ -97,7 +97,7 @@ func main(){
   color.Green(Info)
 
   if runtime.GOOS == "windows" {
-    exec.Command("cmd", "/C", string("export GOARCH=386 && go build -ldflags \"-H windowsgui -s\" -o " + OutputFile[1] + " Wrapper.go ")).Run()
+    exec.Command("cmd", "/C", string("set GOARCH=386 && go build -ldflags \"-H windowsgui -s\" -o " + OutputFile[1] + " Wrapper.go ")).Run()
     exec.Command("cmd", "/C", "del Wrapper.go").Run()  
   }else if runtime.GOOS == "linux" {
     Build := string("export GOOS=windows && export GOARCH=386 && go build -ldflags \"-H windowsgui -s\" -o " + OutputFile[1] + " Wrapper.go ")
