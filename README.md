@@ -16,3 +16,8 @@ Handy tool for binding two binary to one executable ;D
     -o          Specify output file name
 
     --hide			Hide the binarys after dispatch
+
+
+# DONATIONS
+
+- http://patreon.com/user?u=3556027
